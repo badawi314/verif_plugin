@@ -1,0 +1,9 @@
+[general]
+name=VerificationPlugin
+description=Plugin qui demande un mot de passe avant de valider l’accès.
+version=1.0
+qgisMinimumVersion=3.0
+author=Ahmadou Badawi MBACKE
+email=ahma434@gmail.com
+about=Ce plugin affiche une boîte de dialogue de mot de passe simple.
+category=Plugins
