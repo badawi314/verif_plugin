@@ -9,7 +9,7 @@ class VerifPlugin:
         self.plugin_name = "Vérif Accès"
         self.action = None
         self.plugin_dir = os.path.dirname(__file__)
-        git_path = r"C:\Program Files\Git\cmd\git.exe"
+        self.git_path = r"C:\Program Files\Git\cmd\git.exe"
 
     def update_plugin(self):
         plugin_dir = os.path.dirname(__file__)
@@ -64,6 +64,7 @@ class VerifPlugin:
     def unload(self):
         self.iface.removeToolBarIcon(self.action)
         self.iface.removePluginMenu("&Vérif Accès", self.action)
+
 
 
 
