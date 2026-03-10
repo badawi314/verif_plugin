@@ -18,7 +18,7 @@ class VerifPlugin:
             result = subprocess.run([git_path, "-C", plugin_dir, "pull"],capture_output=True,text=True)
             print(result.stdout)
         except Exception as e:
-        print("Impossible de vérifier les mises à jour :", e)
+            print("Impossible de vérifier les mises à jour :", e)
     
     def initGui(self):
         self.update_plugin()
@@ -64,6 +64,7 @@ class VerifPlugin:
     def unload(self):
         self.iface.removeToolBarIcon(self.action)
         self.iface.removePluginMenu("&Vérif Accès", self.action)
+
 
 
 
