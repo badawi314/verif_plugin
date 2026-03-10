@@ -9,7 +9,7 @@ class VerifPlugin:
         self.action = None
         self.plugin_dir = os.path.dirname(__file__)
 
-    def update_plugin():
+    def update_plugin(self):
         plugin_dir = os.path.dirname(__file__)
         try:
             subprocess.call(["git", "-C", plugin_dir, "pull"])
@@ -62,3 +62,4 @@ class VerifPlugin:
     def unload(self):
         self.iface.removeToolBarIcon(self.action)
         self.iface.removePluginMenu("&Vérif Accès", self.action)
+
