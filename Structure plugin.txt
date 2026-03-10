@@ -1,0 +1,10 @@
+verif_plugin/
+│
+├──fichier python nommé obligatoire comme suit: __init__.py
+├──fichier texte nommé obligatoirement comme suit: metadata.txt 
+├──fichier python(le main)nommé obligatoirement comme suit: main_plugin.py
+└──fichier facultatif nommé: resources.qrc (facultatif)
+└── fichier du logo nommé obligatoirement: icon.png
+
+
+NB: Le nom du dossier est le nom du plugin (important : il doit correspondre au name dans metadata.txt)
