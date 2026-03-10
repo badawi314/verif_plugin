@@ -1,6 +1,7 @@
 from qgis.PyQt.QtWidgets import QAction, QInputDialog, QMessageBox
 from qgis.PyQt.QtGui import QIcon
 import os
+import subprocess
 
 class VerifPlugin:
     def __init__(self, iface):
@@ -62,6 +63,7 @@ class VerifPlugin:
     def unload(self):
         self.iface.removeToolBarIcon(self.action)
         self.iface.removePluginMenu("&Vérif Accès", self.action)
+
 
 
 
