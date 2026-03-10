@@ -38,7 +38,7 @@ class VerifPlugin:
         self.iface.addPluginToMenu("&Vérif Accès", self.action)
 
     def demander_mot_de_passe(self):
-        MOT_DE_PASSE = "123"
+        MOT_DE_PASSE = "1234567"
         mdp, ok = QInputDialog.getText(
             None,
             "Accès restreint",
@@ -63,6 +63,7 @@ class VerifPlugin:
     def unload(self):
         self.iface.removeToolBarIcon(self.action)
         self.iface.removePluginMenu("&Vérif Accès", self.action)
+
 
 
 
