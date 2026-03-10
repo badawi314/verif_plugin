@@ -9,11 +9,12 @@ class VerifPlugin:
         self.plugin_name = "Vérif Accès"
         self.action = None
         self.plugin_dir = os.path.dirname(__file__)
+        git_path = r"C:\Program Files\Git\cmd\git.exe"
 
     def update_plugin(self):
         plugin_dir = os.path.dirname(__file__)
         try:
-            result = subprocess.run(["git", "-C", plugin_dir, "pull"],capture_output=True,text=True)
+            result = subprocess.run([git_path, "-C", plugin_dir, "pull"],capture_output=True,text=True)
             print(result.stdout)
         except:
             print("Impossible de vérifier les mises à jour :", e)
@@ -63,6 +64,7 @@ class VerifPlugin:
     def unload(self):
         self.iface.removeToolBarIcon(self.action)
         self.iface.removePluginMenu("&Vérif Accès", self.action)
+
 
 
 
