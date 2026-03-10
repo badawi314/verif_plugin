@@ -19,7 +19,7 @@ class VerifPlugin:
     
     
     def initGui(self):
-        update_plugin()
+        self.update_plugin()
         # Chemin vers l’icône
         icon_path = os.path.join(self.plugin_dir, "icon.png")
 
@@ -62,4 +62,5 @@ class VerifPlugin:
     def unload(self):
         self.iface.removeToolBarIcon(self.action)
         self.iface.removePluginMenu("&Vérif Accès", self.action)
+
 
