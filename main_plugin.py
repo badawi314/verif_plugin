@@ -13,10 +13,10 @@ class VerifPlugin:
     def update_plugin(self):
         plugin_dir = os.path.dirname(__file__)
         try:
-            subprocess.call(["git", "-C", plugin_dir, "pull"])
+            result = subprocess.run(["git", "-C", plugin_dir, "pull"],capture_output=True,text=True)
             print("Plugin mis à jour")
         except:
-            print("Impossible de vérifier les mises à jour")
+            print(result.stdout)
     
     
     def initGui(self):
@@ -63,6 +63,7 @@ class VerifPlugin:
     def unload(self):
         self.iface.removeToolBarIcon(self.action)
         self.iface.removePluginMenu("&Vérif Accès", self.action)
+
 
 
 
